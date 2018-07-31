@@ -1,0 +1,14 @@
+def sv_tree(trunk_length, levels):
+    def sv_tree_helper(trunk_length, levels, direction): 
+        if levels == 0:
+            return
+        if direction == 'l':
+            turtle.left(45)
+        elif direction == 'r':
+            turtle.right(45)
+            
+        turtle.forward(trunk_length)
+        sv_tree(trunk_length / 2, levels - 1)
+    sv_tree_helper(trunk_length, levels, 'l')
+    sv_tree_helper(trunk_length, levels, 'r')
+    turtle.done  

@@ -1,0 +1,20 @@
+JS in class instructions
+-------------------------------
+
+- Examine the markup in html file. You will add event handlers to the thumbnail images and to the larger image. 
+  You will not need to make any changes to the supplied markup or CSS.
+- All of your event handlers must execute only after the page has loaded.
+- You are going to add a click event handler to each of the thumbnail images.
+  When the smaller image is clicked, your code will show the larger version of the image in the <img> element
+  within the <figure> element. This same event handler will also set the <figcaption> text of the <figure> to
+  the clicked thumbnail image's title attribute. Your event handler mus use event delegation
+  (i.e., the click event handler will be attached to the <div id="thumbnails"> element and not to the individual
+  <img> elements.)
+- You must also add event handlers to the mouseover and mouseout events of the <figure> element. When the 
+  user moves the mouse over the larger image, then you will fade the <figcaption> element to about 80% opacity
+  (its initial CSS opacity is 0% or transparent/invisible). When the user moves the mouse out of the figure, 
+  then fade the <figcaption> back to 0% opacity. You can set the opacity of an element in JS by setting its 
+  style .opacity property.
+- You can animate (for instance, a fade is an animation) any CSS setting (such as opacity) in JS by setting
+  its style.transition property. For instance, in JS, setting an object's transition style property to "opacity 1s"
+  tells the browser to transition the opacity to its next setting across one second. 

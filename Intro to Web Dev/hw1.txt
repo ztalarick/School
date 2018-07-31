@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+	<head>
+		
+	</head>
+	
+	<body>
+		<h1> Isaac's Schedule </h1>
+		
+		<ul>
+			<li><u>CS334</u> Automata</li>
+			<li><u>CS306</u> Intro to IT Sec</li>
+			<li><u>MA222</u> Prob Stats</li>
+			<li><u>CS383</u> Comp Org</li>
+			<li><u>CS549</u> Distrib Systems</li>
+			<li><u>CS392</u> Systems</li>
+			<li><u>PE200</u> PE</li>
+		</ul>
+	</body>
+</html>

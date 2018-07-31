@@ -1,0 +1,81 @@
+Quizes for intro to web
+
+Authoritative server- Server that says it doesn't have the data needed
+Recursive server- Stored in the cache memory and either has the data needed or knows where to find it.
+
+Link Layer: Packet Creation
+Interent Layer: Makes use of IP adresses
+Transport Layer: ensures transmissions arrive in order
+Application Layer: DNS, SST
+
+
+Project starts slow, speeds up in the middle and slows again in the end.
+
+uncertainty of price is higher at the end of a project
+
+--------------------------------------------------MID TERM TOPICS------------------------------------------------------------
+
+I. Difference between authoritaive vs recersive DNS System
+	Authoritative - Gives a direct response either the system identifies the adress or is doesn't
+	Recursive  - Gives a response even if it doesn't identify the adress, Stored in the cache memory 
+and either has the data needed or knows where to find it.
+
+
+II. Packet Layers:
+	1. Link Layer		Packet Creation
+	2. Internet		Makes use of IP adresses
+	3. Transport		Ensures the transmission of packets arrives in order 
+	4. Applications		DNS SSH
+III. Understand how Waterfall works
+	1. Requirment Analysis 
+		-Define problem
+		-Step - by Step solution
+		-Constraints
+		-Measuring of sucess
+	2. System Design
+	3. Implementation
+	4. Testing
+		-whitebox
+		-blackbox
+	5. Deployment
+	6. Maintenence
+	Life Cycle of Project
+		-Slow start, quck middle, slow finish
+		-Highest cost uncertainty is at the end (graph - prediction, 3 lines space grows larger at the end)
+IV. Testing
+	Type of Errors
+		1. Logic
+			-hardest
+			error in logic of the code
+		2. Runtime
+			- error when the code is running
+			- outofbounds, converting string to int with invalid input
+		3. Syntax
+			-easiest to fix
+			-code doesn't compile
+			-error in grammar of code, ie forgetting a ;
+
+	Whitebox
+		-Testing through following logic of code
+	Blackbox
+		-Testing only through results of program with no knowledge of internal code
+	Levels of Testing
+		1. Unit Test
+			-test each unit individualy
+		2. Integration
+			-integrate all units together and test or add units together and test one at a time
+		3. Acceptance testing
+			-Alpha/beta
+			-actual users test
+V. HTML stuff
+	1. Table
+		-<table> = defines a table 
+		-<tr> = defines a row 
+		-<th> = header, default bold 
+		-<td> = all other cells no default
+		-rowspan/colspan changes number of rows/collums a cell spans
+		-no borders by default define in <head> </head> by:
+			<style>
+				table
+					{border = 1px; }
+ 			</style>

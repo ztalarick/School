@@ -1,0 +1,90 @@
+.underline{
+    text-decoration: underline;
+}
+
+.no-underline a{
+    text-decoration: none;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+
+.cleartext {
+    color: white;
+}
+
+.bg-black{
+    background-color: black;
+    color: black;
+}
+
+.bg-red{
+    background-color: red;
+    color: red;
+}
+
+.fg-white{
+    color: white;
+}
+
+.fg-purple{
+    color: purple;
+}
+
+.shadow{
+    text-shadow: 2px 2px #ff0000;
+}
+
+.round{
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+.borders{
+    border: 2px solid;
+    padding: 2px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+div{
+    font-weight: normal;
+}
+
+.code{
+    font-family: monospace;
+}
+
+.hover-underline:hover{
+    text-decoration: underline;
+}
+
+.hover-background:hover{
+    background-color: red;
+}
+
+.cap-first::first-letter{
+    text-transform: capitalize;
+}
+
+.rotate{
+    transform: rotate(-180deg);
+    position: absolute;
+}
+
+.cant-even{
+    
+}
+
+.stuck{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+.blur {
+   color: transparent;
+   text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;&apos; to &apos;HW.IDList.indices&apos;&#x0D;&#x0A;- Original project: &apos;CS284&apos;&#x0D;&#x0A;- Destination element: &apos;HW.IDList.indices&apos;&#x0D;&#x0A;- Original element: &apos;HW.IDList.IDList()&apos;" description="Copy method" destination="/src&lt;HW{IDList.java[IDList^indices" element1="/src&lt;HW{IDList.java[IDList~IDList" flags="589830" id="org.eclipse.jdt.ui.copy" members="1" policy="org.eclipse.jdt.ui.copyMembers" stamp="1520951767857" version="1.0"/>
+</session>

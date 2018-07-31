@@ -1,0 +1,39 @@
+'''
+Created on Sep 12, 2017
+
+@author: Zach
+'''
+from cs115 import  map, reduce
+
+def tower(n):
+    if n == 0: 
+        return 1 
+    return 2 ** tower(n - 1)
+    
+print(map(tower, range(5)))
+    
+def tower_reduce(n):
+    def power(x, y):
+        return y ** x
+    if n == 0:
+        return 1
+    return reduce(power, [2] * n)
+    
+def length(lst):
+    if lst == []:
+        return 0
+    return 1 + length(lst[1:])
+    
+def reverse(lst):
+    if lst == []:
+        return []
+    return reverse(lst[1:]) + [lst[0]]
+    
+print(reverse([1, 2, 3, 4]))
+    
+def member (x, lst):
+    if lst == []:
+        return False
+    if x == lst[0]:
+        return True
+    return member(x, lst[1:])

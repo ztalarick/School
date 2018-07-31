@@ -1,0 +1,102 @@
+from cs115 import *
+
+def readInData():
+    database = {}
+    try:
+        handle = open('musicrecplus.txt', 'r')
+        lines = handle.read().splitlines()
+        handle.close()
+        for line in lines:
+            #print("Line: ", line)
+            parts = line.split(':')
+            name = parts[0]
+            artists = parts[1]
+            #print("name: '%s' artists: '%s'" % (name, artists))
+            database[name] = sorted(artists.split(','))
+    except:
+        return database
+    return database
+
+def getUser():
+    print('Enter your name (put a $ symbol after your name if you wish your preferences to remain private): ')
+    username = input()
+    return username
+
+def myMap(fn, iterable):
+    ret = [0] * len(iterable)
+    i = 0
+    for thing in iterable:
+        ret[i] = fn(thing)
+        i += 1
+    return ret
+        
+def printOnePerLine(iterable):
+    for thing in iterable:
+        print(thing)
+        
+
+def getRecs(user, database):
+    '''Get recommendations'''
+    def compare(userArtists, compareArtists, otherUName):
+        if otherUName[-1] == '$':
+            return -1
+        iUser = 0
+        iCompare = 0
+        score = 0
+        while iUser < len(userArtists) and iCompare < len(compareArtists):
+            if userArtists[iUser] == compareArtists[iCompare]:
+                score += 1
+                iUser += 1
+                iCompare += 1
+            elif userArtists[iUser] < compareArtists[iCompare]:
+                iUser += 1
+            else: 
+                iCompare += 1
+        if len(compareArtists) == score:
+            return -1
+        return score
+    
+    def diff(userArtists, compareArtists):
+        iUser = 0
+        iCompare = 0
+        diffs = []
+        while iUser < len(userArtists) and iCompare < len(compareArtists):
+            if userArtists[iUser] == compareArtists[iCompare]:
+                iUser += 1
+                iCompare += 1
+            elif userArtists[iUser] < compareArtists[iCompare]:
+                iUser += 1
+            else:
+                diffs.append(compareArtists[iCompare]) 
+                iCompare += 1
+        return diff
+    
+    userArtists = database[user]
+    ranked = sorted(myMap(lambda uname: (compare(userArtists, database[uname], uname), uname), database), reverse = True)
+    
+    if len(ranked) == 0 or ranked[0][0] == -1:
+        print('No recommendations available at this time')
+        return
+    
+    maxScore = ranked[0][0]
+    iMax = 0
+    
+    for result in ranked:
+        if maxScore != result[0]:
+            break
+        iMax += 1
+    
+    artists = []
+    for i in range(iMax):
+        artists.extend(diff(userArtists, database[ranked[0][1]]))
+    artists = sorted(list(set(artists)))
+    printOnePerLine(artists)
+    
+
+
+def main():
+    database = readInData()
+    user = getUser()
+    getRecs(user, database)
+    
+main()

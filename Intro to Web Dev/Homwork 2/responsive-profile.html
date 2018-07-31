@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Profile Page</title>
+
+    <!-- Use this metatag for mobile pages (Everyone just copy and pastes it) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+
+    code {
+      font-family: monospace;
+    }
+    
+    /* A E S T H E T I C */
+    .aesthetic {
+      font-family: serif;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      transition: all 0.5s;
+    }
+
+    .aesthetic:hover {
+      animation: rainbow 1s infinite;
+      color: #faa;
+    }
+
+    @keyframes rainbow {
+      from {
+        filter: hue-rotate(0deg);
+      }
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+
+    /* World domination layout and animation */
+    body {
+      /*
+        The world domination gets so big
+          that it adds a scrollbar to the page...
+
+        So let's hide that :)
+         */
+      overflow-x: hidden;
+
+      background-color: #f5f5f5;
+    }
+    .world-domination-shake, .world-domination-grow {
+      color: black;
+      position: absolute; /* This is needed to use transform */
+      white-space: nowrap; /* Don't want the words to split up */
+    }
+    .world-domination-shake:hover {
+      animation: shake 0.5s infinite; /* Animate the shake foreverrrrr */
+    }
+    .world-domination-grow {
+      transition: all 0s; /* if we're not hovering, make the text small immediately */
+    }
+    .world-domination-grow:hover {
+      color: red;
+      text-shadow: 0 0 5px red;
+      transform: scale(10, 10) rotate(30deg);
+      transition: all 100s; /* Animate the all element properties over 100 seconds */
+    }
+    .invisible {
+      color: transparent;
+    }
+
+    /* Animation for shaking the world domination */
+    @keyframes shake {
+      0% {
+        transform: translate(0, 0);
+      }
+      10% {
+        transform: translate(-2px, 2px);
+      }
+      20% {
+        transform: translate(2px, -2px);
+      }
+      30% {
+        transform: translate(-2px, -2px);
+      }
+      40% {
+        transform: translate(2px, 2px);
+      }
+      50% {
+        transform: translate(2px, -2px);
+      }
+      60% {
+        transform: translate(2px, 2px);
+      }
+      70% {
+        transform: translate(-2px, 2px);
+      }
+      80% {
+        transform: translate(-2px, -2px);
+      }
+      90% {
+        transform: translate(2px, 2px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+  </style>
+  <body>
+    <div class="profile">
+      <img class="profile-picture large" src="https://img0.etsystatic.com/007/0/5491726/il_fullxfull.373486284_7urh.jpg">
+
+      <!-- You might need to put max-width: 100% on this for mobile views -->
+      <div class="profile-content">
+        <header>
+          <h1 class="profile-name">Mr Cat</h1>
+          <h2 class="subheader">Business Cat, Professional Web Developer</h2>
+          <p>
+            Hi, my name is Mr Cat. I secretly plan for <span class="world-domination-container">
+              <!-- 
+                This will be position absolute so it can shake an grow when hovered
+              -->
+              <span class="world-domination-shake">
+                <span class="world-domination-grow">
+                  w͖̝̭͖͈̦ͧ̓̎o͎͖̜̝͈͈̓ŕ͎̲̬̟͙̠̻ͩ͟ḷ̍ͫͥ͆͝d͜ ̬̤̹̗͉̋̉̔d̛̫̔͐͆̆͋̆ͅǒ̗͇̞̣͙̖̥ͥ͋ͥͭͭ͡m̢̤̣̰̱̠̝͗̌̒́̈́ͪi̤͉n͊̀̎͒̿̈́̚͏͈ả̶̬̺̩̰̘͐̌͆ͯt̨ͫ̈̉̔ͧ̌ͅi̹̺͔͕̣͒͟o̙͔͚̙̳ṉ̭ͮ̾̑̉
+                </span>
+              </span>
+              <!--
+                I made this invisible so I can use the width for when the zalgo (above)
+                  position: absolute
+              -->
+              <span class="invisible">world domination</span>
+            </span> and free reign for the feline empire! I'll accept all friend requests if your name without honorifics starts on the first half of the alphabet, otherwise, please add me on SnapCat first! 
+          </p>
+        </header>
+        <section>
+          <h3>Interests</h3>
+          <p>
+            I like tearing holes in furniture. I develop clean websites with <span class="aesthetic">aesthetic</span> the likes of which has never been seen before in CS 146. I lead sales in multiple departments in middle management. I only eat fish and birds originating from the equator.
+          </p>
+        </section>
+        <section>
+          <h3>Hints</h3>
+          <p>
+            I really like using <code>box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);</code> for shadows!
+            If an image doesn't fit scale well with its size, I typically use <code>object-fit: cover;</code> to make the image cover its element! When text is too cluttered, I simply put <code>line-height: 1.4;</code> for more breathing room!
+          </p>
+        </section>
+        <section>
+          <h3>Friends</h3>
+          <!-- Playing flexboxfroggy.com will make centering and wrapping these a lot easier! -->
+          <div class="friends-list">
+            <img class="profile-picture small online" src="http://www.petmd.com/sites/all/modules/breedopedia/images/thumbnails/cat/tn-sokoke-forest-cat.jpg">
+            <img class="profile-picture small online" src="https://yt3.ggpht.com/-Uqwr0hWfOic/AAAAAAAAAAI/AAAAAAAAAAA/Rip1vis4UrM/s100-c-k-no-mo-rj-c0xffffff/photo.jpg">
+            <img class="profile-picture small offline" src="https://img.thrfun.com/img/083/421/cat_with_fleas_ts1.jpg">
+            <img class="profile-picture small offline" src="https://yt3.ggpht.com/-eOoGMjwrbH0/AAAAAAAAAAI/AAAAAAAAAAA/OK3BG-h02r8/s100-c-k-no-mo-rj-c0xffffff/photo.jpg">
+            <img class="profile-picture small offline" src="http://is2.mzstatic.com/image/thumb/Purple118/v4/30/3d/d6/303dd663-6e2c-7a99-e5d2-5ec0f5578997/source/100x100bb.jpg">
+            <img class="profile-picture small offline" src="https://cdn.skim.gs/image/upload/c_fill,f_auto,fl_lossy,q_auto,h_100,w_100,dpr_1.0/bstgpv87cx0zkqavsq9c">
+            <img class="profile-picture small offline" src="https://untappedcities-wpengine.netdna-ssl.com/wp-content/uploads/2017/10/Matilda-Cat-Algonquin-Hotel-NYC-Untapped-Cities-100x100.jpg">
+            <img class="profile-picture small offline" src="https://yt3.ggpht.com/-PFDc7zNOArk/AAAAAAAAAAI/AAAAAAAAAAA/cyOu5r-ugt0/s100-c-k-no-mo-rj-c0xffffff/photo.jpg">
+            <img class="profile-picture small offline" src="http://www.pethealthnetwork.com/sites/default/files/8-common-myths-about-surgery-and-cats-178110810.jpg">
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

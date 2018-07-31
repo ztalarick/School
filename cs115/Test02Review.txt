@@ -1,0 +1,49 @@
+	TEST 2 REVIEW
+Topics:
+	1. use it/lose it
+	2. memoization
+	3. circuit
+	4. unittest
+	5. binary
+
+I. Use it or Lose it
+	A. tree recursion, compares one end of the tree to other and returns the desired result
+		i. lose = the recursive call of the function without the first value, lose = func(l[1:])
+		ii. use = try using the first number to complete the objection
+II. Dictionary
+	A. dict = {key:values}
+		i. only certain values you can give keys: strings, tupples, lists, and numbers
+III. Memoization
+	A. uses a dictionary to speed up tree recursion
+		i.  checks to see if the call is in the dictionary
+		ii. gives you the answer if it is stored
+		iii. stores every recursive call in a dictionary
+		iv. only needs to compute recursive calls 1 time, and speeds up tree recursion like crazy.
+	B. def fib(n):
+		return fibh(n, {})
+	   def fibh (n, memo)
+		if n in memo: //checks if memo is in the dictionary
+			return memo[n] //returns the stored recursive call
+		if n < 2 // base case
+			ret = n //stores the return value in a variable so you can later add it to the dictionary
+		else: // need an else because you have no return in the if statement
+			ret = fib(n - 1, memo) + fibh(n - 2, //stores the return value in a variable so you can later add it to the dictionary
+		memo[n] = ret //stores value in the dictionary
+		return ret //returns answer
+IV. Circuits
+
+0 = FALSE
+1 = TRUE
+					_
+	A	B	AB	A+B	A	
+	0	0	0	0	1
+	0	1	0	1	1
+	1	0	0	1	0
+	1	1	1	1	0
+V. unit test
+	i. 
+	import unittest
+	class tests(unittest.TestCase)
+		def test1(self)
+			self.assertTrue(isEven(8))
+	ii. assertTrue assertFalse assertEquals

@@ -1,0 +1,9 @@
+CS 284 Notes
+Algorithm Complexity
+	Comparing Efficiency
+		-should be independent of device used despite the diffent RunTimes
+		- compare units of time
+			+one iteration = one unit 
+			+always worst case scenario
+			+linear growth rate = O(n)
+			+quadratic growth rate = O(n^2)

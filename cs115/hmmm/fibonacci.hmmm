@@ -1,0 +1,14 @@
+#fibonacci.hmmm
+#Zachary Talarick 10/27/2017
+#prints the first n fibonacci numbers
+0 read r1	#reads the number of fibonacci numbers from the user
+1 setn r2 0	#sets r2 to be 0  
+2 setn r3 1	#sets r3 to be 1
+3 jeqzn r1 10	#checks if r1 == 0 as a basecase, if true jump to halt  
+4 write r2	#write r2
+5 add r4 r2 r3	#adds r2 and r3 to get the next value
+6 copy r2 r3	#changes r3 to r2
+7 copy r3 r4	#changes r4 to r3
+8 addn r1 -1	#subtract 1 from r1 to reach the basecase
+9 jumpn 3  	#jump to the begining of the loop
+10 halt		#stop

@@ -1,0 +1,41 @@
+
+.Comment{
+    color:aqua;
+    background-color: white;
+}
+body{
+    background-color: #E8EAF6;
+}
+header, footer, main{
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+h1, h2, h3, p, a{
+    font-family:sans-serif;
+    padding: 3px;
+}
+h1, p{
+    margin: auto;
+    background-color:darkblue;
+    color: white;
+    
+}
+nav{
+    background-color: mediumblue;
+    padding: 3px;
+    
+}
+a{
+    color:lightblue;
+    text-decoration: none;
+}
+a:hover{
+    background-color: darkblue;
+    font-weight: bold;
+}
+
+h3{
+    background-color: dodgerblue;
+    color: white;
+}

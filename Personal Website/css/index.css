@@ -1,0 +1,52 @@
+h1, h2, h3, h4, p
+{
+    text-align: center;
+    font-family: sans-serif;
+}
+ul 
+    {
+            margin:0;
+            padding:0;
+            text-align: center;
+            list-style:none;                
+    }
+ul  li 
+    {
+            padding: 2px 5px;               
+    }
+ul li:before 
+    {
+            content:url(http://www.un.org/en/oaj/unjs/efiling/added/images/bullet-list-icon-blue.jpg);;
+    }
+table
+{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 24px;
+    border-collapse: collapse;
+    padding: 20px;  
+}
+th{
+    padding: 75px
+}
+th:hover
+{
+    background-color: gray;
+}
+.no-border{
+    border-left-style: hidden;
+}
+th{
+    border-left-width: 1px;
+    border-left-color: black;
+    border-left-style: solid;
+}
+a
+{
+    color: black;
+    text-decoration: none;
+}
+a:hover
+{
+    color: lightgray;
+}

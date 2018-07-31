@@ -1,0 +1,94 @@
+/* Zachary Talarick 11/15/2017
+I pledge my honor that I have abided by the stevens honor system. -ztalaric */
+
+.profile-name, .subheader{
+    font-weight: normal;
+}
+
+.subheader{
+    font-size: 14px;
+}
+
+h2, h3{
+    color: gray;
+}
+
+h3{
+    text-decoration: underline;
+}
+
+.offline{
+    opacity: .5;
+}
+
+.profile{
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.small{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+
+@media (min-width: 800px){ /* Desktop */
+    .profile{
+        max-width: 800px;
+        
+        display: flex;
+          
+    }
+    
+    .profile-picture.large{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: flex-start;  
+        
+    }
+
+    .profile-content{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width: 799px){ /* Tablet */
+    
+    .profile{
+        margin: 15px; 
+    }
+    .large{
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+    
+    }
+    .profile-picture
+    {
+        border-radius: 50%;
+    }
+    h1, h2, h3{
+        text-align: center;
+    }
+    .friends-list{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+    }
+    
+        
+}
+
+@media(max-width: 400px){ /* Mobile */
+    .profile{
+        text-align: justify;
+        line-height: 140%
+    }
+    
+}

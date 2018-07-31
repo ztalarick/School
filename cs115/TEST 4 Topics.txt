@@ -1,0 +1,36 @@
+class X(object):
+	pass
+class Y(X):
+	pass
+class A(Y):
+	pass
+class B(A):
+	pass
+class Z(X):
+	pass
+
+Inheritance Chart
+	 Object
+	    ^
+	    |
+	    X
+	    ^
+	 /     \
+	|	|
+	Y	Z
+	^
+	|
+	A
+	^
+	|
+	B
+
+a = A() instantiation, creating an instance of class A
+isisnstance(a, A) = True
+isisnstance(a, B) = False
+isisnstance(a, object) = True
+isisnstance(a, z) = false
+
+abstract class - @abstractmethod/property -	class is not instantiable
+
+except errors - index error, value error, type error, zero division error

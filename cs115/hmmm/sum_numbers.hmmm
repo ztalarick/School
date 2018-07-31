@@ -1,0 +1,14 @@
+#sum_numbers.hmmm
+#Zachary Talarick 10/23/2017
+#add numbers 1 to n
+0 read r1
+1 setn r2 0
+2 setn r3 0
+3 jeqzn r1, 9
+4 addn r2 1
+5 write r2
+6 add r3 r3 r2
+7 addn r1 -1
+8 jumpn 3
+9 write r3
+10 halt

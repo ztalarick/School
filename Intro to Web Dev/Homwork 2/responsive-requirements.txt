@@ -1,0 +1,29 @@
+You don't have to make it look exactly like the demo, just do what's required!
+
+Base requirements:
+  - Headers are NOT bold
+  - Subheader has a smaller font size (14px works)
+  - h3 has a thin underline
+  - h2 and h3 are grey
+  - Offline profiles are 50% transparent
+  - Profile has a non-grey background and a shadow
+  - Small profile pictures are 50px
+  - Friends list pictures have some space between them
+
+Desktop View (> 800px):
+  - Large profile picture is a 300px square
+  - Max width of the profile is 800px
+  - Profile pictures are rectangles
+  - Main profile picture is on the left of the bio
+
+Tablet View (< 800px):
+  - The profile should have small margins on each side
+  - Large profile picture is a 150px square
+  - Profile pictures are circles
+  - Main profile picture is centered and above the bio
+  - Headers are centered
+  - Friends list pictures are centered and wrap when there are too many
+
+Mobile View (including Tablet View requirements) (< 400px):
+  - Paragraphs have justified text (text spans on entire page)
+  - Line height should be increased for readability
